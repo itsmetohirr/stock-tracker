@@ -1,6 +1,5 @@
 import requests
 from datetime import datetime, timedelta
-from twilio.rest import Client
 import smtplib
 
 # APIs
@@ -9,9 +8,6 @@ NEWS_API_KEY = "d74d788355b84532809fb82f7650c795"
 
 STOCK_API_ENDPOINT = "https://www.alphavantage.co/query"
 STOCK_API_KEY = "6QPRDLN1E85O2DVA"
-
-# twillio
-
 
 company = "Tesla Inc"
 company_symbol = "TSLA"
@@ -70,11 +66,3 @@ if dif_percent >= 5:
 # ---------------- SMS ---------------- #
 print(dif_percent)
 print(news_message)
-# if dif_percent >= 5:
-#     client = Client(account_sid, auth_token)
-#     message = client.messages.create(
-#         body=news_message,
-#         from_='+12565402717',
-#         to='+998334121086'
-#     )
-#     print(message.status)
