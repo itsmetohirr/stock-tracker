@@ -11,9 +11,7 @@ STOCK_API_ENDPOINT = "https://www.alphavantage.co/query"
 STOCK_API_KEY = "6QPRDLN1E85O2DVA"
 
 # twillio
-account_sid = "ACe60014cbd3d83fdcb811d5abf842d5b9"
-auth_token = "ac826ceae23ea31113bc3bf6b1867fa7"
-PHONE_NUMBER = "+12565402717"
+
 
 company = "Tesla Inc"
 company_symbol = "TSLA"
@@ -72,11 +70,11 @@ if dif_percent >= 5:
 # ---------------- SMS ---------------- #
 print(dif_percent)
 print(news_message)
-if dif_percent >= 5:
-    client = Client(account_sid, auth_token)
-    message = client.messages.create(
-        body=news_message,
-        from_='+12565402717',
-        to='+998334121086'
-    )
-    print(message.status)
+# if dif_percent >= 5:
+#     client = Client(account_sid, auth_token)
+#     message = client.messages.create(
+#         body=news_message,
+#         from_='+12565402717',
+#         to='+998334121086'
+#     )
+#     print(message.status)
